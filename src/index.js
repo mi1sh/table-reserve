@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import './index.scss';
-import './firebase/app';
+import './firebase/firebase';
 import App from './App';
 import { store } from './store';
 

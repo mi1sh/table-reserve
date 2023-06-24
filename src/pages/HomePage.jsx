@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { useAuth } from '../hooks/use-auth';
 import { removeUser } from '../store/slices/userSlice';
+import { WindupChildren, Pace, CharWrapper } from 'windups';
+import { AboutAnimation } from '../components/About';
 import About from '../components/About';
 
 const HomePage = () => {
@@ -11,7 +13,15 @@ const HomePage = () => {
 	if (isAuth) {
 		return (
 			<div className='text-center pt-5'>
-				<h1>Welcome</h1>
+				<CharWrapper element={AboutAnimation}>
+					<WindupChildren>
+						<Pace ms={5}>
+							<h1 style={{ fontSize: 120, fontFamily: 'tilt prism' }}>
+								Welcome
+							</h1>
+						</Pace>
+					</WindupChildren>
+				</CharWrapper>
 
 				<button
 					type='button'
@@ -27,12 +37,15 @@ const HomePage = () => {
 	return (
 		<>
 			<div className='text-center pt-5'>
-				<h1
-					className='text-dark'
-					style={{ fontSize: 120, fontFamily: 'tilt prism' }}
-				>
-					Welcome
-				</h1>
+				<CharWrapper element={AboutAnimation}>
+					<WindupChildren>
+						<Pace ms={5}>
+							<h1 style={{ fontSize: 120, fontFamily: 'tilt prism' }}>
+								Welcome
+							</h1>
+						</Pace>
+					</WindupChildren>
+				</CharWrapper>
 				<a
 					type='button'
 					className='btn btn-dark me-3 btn-lg shadow'

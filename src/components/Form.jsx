@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const Form = ({ title, handleClick }) => {
-	const [email, setEmail] = useState();
-	const [password, setPassword] = useState();
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 
 	return (
 		<>
-			<div className='d-flex justify-content-center gap-3 pb-3'>
+			<div className='form d-flex justify-content-center gap-3 pb-3'>
 				<div className='form-floating shadow-lg'>
 					<input
 						id='floatingInput'
@@ -18,7 +18,7 @@ const Form = ({ title, handleClick }) => {
 						onChange={e => setEmail(e.target.value)}
 						placeholder='name@example.com'
 					/>
-					<label for='floatingInput'>Email</label>
+					<label htmlFor='floatingInput'>Email</label>
 				</div>
 				<div className='form-floating shadow-lg'>
 					<input
@@ -29,7 +29,7 @@ const Form = ({ title, handleClick }) => {
 						onChange={e => setPassword(e.target.value)}
 						placeholder='Your password'
 					/>
-					<label for='floatingPassword'>Password</label>
+					<label htmlFor='floatingPassword'>Password</label>
 				</div>
 			</div>
 			<button

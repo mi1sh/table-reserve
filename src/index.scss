@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 body {
   font-family: 'Roboto Mono', 'orbit', 'Tilt Prism', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,6 +26,24 @@ section {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.about-animation {
+  @keyframes typewrite {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  animation-name: typewrite;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+nav {
+  color: #bdc2c7;
 }
 
 .navbar-brand {
